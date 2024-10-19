@@ -4,11 +4,10 @@ import App from './App.jsx'
 import './index.css'
 import RuioContext from 'ruio'
 
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RuioContext>
       <App />
     </RuioContext>
-  </StrictMode>,
+  </StrictMode>
 )

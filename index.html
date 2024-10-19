@@ -4,10 +4,20 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>Ded Build</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- JavaScript from CDN -->
+    <script src="https://unpkg.com/page/page.js"></script>
+    <script>
+      // Initialize Page.js or other JavaScript
+      page('/', function () {
+        console.log('Home page loaded')
+      })
+      page.start()
+    </script>
   </body>
 </html>
