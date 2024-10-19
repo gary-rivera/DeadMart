@@ -1,24 +1,31 @@
 .itemsContainer {
-  border-top: 1rem black solid;
+  border-top: 6px black solid;
   margin: 0;
-  min-width: 40rem;
-  min-height: 30rem;
-  width: 70rem;
-  height: 40rem;
-  background-color: black;
+  width: 1050px;
 }
 
 .tierRow {
   width: 100%;
-  min-height: 5rem;
   display: flex;
 }
 
-.tierOptionA {
+.tierOne {
+  min-height: 126px;
   background-color: #262626;
 }
 
-.tierOptionB {
+.tierTwo {
+  min-height: 246px;
+  background-color: #353535;
+}
+
+.tierThree {
+  min-height: 246px;
+  background-color: #262626;
+}
+
+.tierFour {
+  min-height: 126px;
   background-color: #353535;
 }
 
@@ -26,24 +33,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 4rem;
-  height: auto;
+  width: 50px;
 }
 
 .sidebar span {
-  height: fit-content;
-  width: 100%;
   transform: rotate(-90deg);
 }
 
 .itemsListContainer {
   display: flex;
 
-  gap: 1rem;
+  gap: 10px;
   flex-wrap: wrap;
   width: -webkit-fill-available;
   min-height: auto;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .itemContainerSlotNav {

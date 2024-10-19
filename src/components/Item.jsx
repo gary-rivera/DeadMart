@@ -11,7 +11,7 @@ function Item({ data }) {
     >
       <div id={data.id} key={data.id} className={styles.itemCard}>
         <div className={styles.topHalf}>
-          <img src={data.image} className={styles.itemImage} />
+          {/* <img src={data.image} className={styles.itemImage} /> */}
         </div>
         <div className={styles.bottomHalf}>
           <span className={styles.itemTitle}>{data.name}</span>

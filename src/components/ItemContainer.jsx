@@ -29,26 +29,23 @@ function ItemContainer() {
     }))
   }, [weaponItems, vitalityItems, spiritItems])
 
-  if (weaponError || vitalityError || spiritError)
-    return <div>Error loading items</div>
-  if (weaponIsLoading && !items.weapon.length) return <div>Loading...</div>
-
-  const tiered = items[currentCategory]
-    .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()))
-    .reduce(
-      (acc, curr) => {
-        if (curr.shopable && acc[curr.item_tier]) {
-          acc[curr.item_tier].push(curr)
-        }
-        return acc
-      },
-      {
-        1: [],
-        2: [],
-        3: [],
-        4: [],
+  const tiered = ALL_WEAPON_ITEMS.sort((a, b) =>
+    a.name.toLowerCase().localeCompare(b.name.toLowerCase())
+  ).reduce(
+    (acc, curr) => {
+      // debugger
+      if (acc[curr.tier.level]) {
+        acc[curr.tier.level].push(curr)
       }
-    )
+      return acc
+    },
+    {
+      1: [],
+      2: [],
+      3: [],
+      4: [],
+    }
+  )
 
   function handleCategoryChange(evt) {
     const category = evt.target.innerText.toLowerCase()
@@ -71,22 +68,22 @@ function ItemContainer() {
         <ItemTierRow
           title="$500"
           items={tiered[1]}
-          className={styles.tierOptionA}
+          className={styles.tierOne}
         />
         <ItemTierRow
           title="$1250"
           items={tiered[2]}
-          className={styles.tierOptionB}
+          className={styles.tierTwo}
         />
         <ItemTierRow
           title="$3000"
           items={tiered[3]}
-          className={styles.tierOptionA}
+          className={styles.tierThree}
         />
         <ItemTierRow
           title="$6200"
           items={tiered[4]}
-          className={styles.tierOptionB}
+          className={styles.tierFour}
         />
       </div>
     </div>
