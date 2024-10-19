@@ -1,0 +1,5 @@
+# Ignore configuration and non-code files
+.gitattributes
+.gitignore
+node_modules
+dist

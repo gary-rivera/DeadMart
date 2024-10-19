@@ -1,7 +1,12 @@
-import './App.css';
+import './App.css'
+import ItemContainer from './components/ItemContainer'
 
 function App() {
-	return <></>;
+  return (
+    <>
+      <ItemContainer />
+    </>
+  )
 }
 
-export default App;
+export default App

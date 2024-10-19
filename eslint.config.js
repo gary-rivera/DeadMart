@@ -11,6 +11,7 @@ export default [
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
+
       parserOptions: {
         ecmaVersion: 'latest',
         ecmaFeatures: { jsx: true },
@@ -22,7 +23,9 @@ export default [
       react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+      prettier,
     },
+    extends: ['eslint:recommended', 'plugin:react/recommended', 'prettier'],
     rules: {
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
@@ -33,6 +36,8 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      'prettier/prettier': 'error',
+      semi: ['error', 'never'],
     },
   },
 ]

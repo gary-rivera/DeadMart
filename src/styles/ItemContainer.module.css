@@ -1,0 +1,44 @@
+.itemsContainer {
+  margin: 0;
+  width: 70%;
+  min-height: 30rem;
+  background-color: black;
+}
+
+.tierRow {
+  width: 100%;
+  min-height: 5rem;
+  display: flex;
+}
+
+.tierOptionA {
+  background-color: #262626;
+}
+
+.tierOptionB {
+  background-color: #353535;
+}
+
+.sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 4rem;
+  height: auto;
+}
+
+.sidebar span {
+  height: fit-content;
+  width: 100%;
+  transform: rotate(-90deg);
+}
+
+.itemsListContainer {
+  display: flex;
+
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: -webkit-fill-available;
+  min-height: auto;
+  padding: 1rem;
+}
