@@ -7,9 +7,7 @@ function Item({ data }) {
       content={<pre>{JSON.stringify(data, null, 4)}</pre>}
       className={styles.tooltip}
       interactive={true} // Allows interaction inside the tooltip
-      delay={[200, 300]} // Delay for show and hide
       hideOnClick={false} // Prevents tooltip from hiding on click
-      duration={[300, 250]} // Animation duration for showing/hiding
     >
       <div id={data.id} key={data.id} className={styles.itemCard}>
         <div className={styles.topHalf}>
