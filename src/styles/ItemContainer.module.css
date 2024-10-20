@@ -4,29 +4,45 @@
   width: 1050px;
 }
 
+.itemsContainer.themeWeapon {
+  border-top: 6px var(--orange-highlight) solid;
+}
+
+.itemsContainer.themeVitality {
+  border-top: 6px var(--green-highlight) solid;
+}
+
+.itemsContainer.themeSpirit {
+  border-top: 6px var(--purple-highlight) solid;
+}
+
 .tierRow {
   width: 100%;
   display: flex;
 }
 
-.tierOne {
-  min-height: 126px;
-  background-color: #262626;
+.tierVariant1.themeWeapon {
+  background-color: var(--orange-bg-1);
 }
 
-.tierTwo {
-  min-height: 246px;
-  background-color: #353535;
+.tierVariant1.themeVitality {
+  background-color: var(--green-bg-1);
 }
 
-.tierThree {
-  min-height: 246px;
-  background-color: #262626;
+.tierVariant1.themeSpirit {
+  background-color: var(--purple-bg-1);
 }
 
-.tierFour {
-  min-height: 126px;
-  background-color: #353535;
+.tierVariant2.themeWeapon {
+  background-color: var(--orange-bg-2);
+}
+
+.tierVariant2.themeVitality {
+  background-color: var(--green-bg-2);
+}
+
+.tierVariant2.themeSpirit {
+  background-color: var(--purple-bg-2);
 }
 
 .sidebar {
@@ -55,7 +71,7 @@
   gap: 0.25rem;
 }
 
-.itemSlotNavTab {
+.navTab {
   display: flex;
   justify-content: center;
   align-items: center;
