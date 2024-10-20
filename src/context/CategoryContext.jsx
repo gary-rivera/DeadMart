@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from 'react'
+import { createContext, useState, useContext, useMemo } from 'react'
 
 const CategoryContext = createContext()
 
@@ -13,10 +13,17 @@ export function CategoryProvider({ children }) {
     vitality: 'themeVitality',
   }
 
+  const value = useMemo(
+    () => ({
+      currentCategory,
+      setCurrentCategory,
+      themeClassMap,
+    }),
+    [currentCategory]
+  )
+
   return (
-    <CategoryContext.Provider
-      value={{ currentCategory, setCurrentCategory, themeClassMap }}
-    >
+    <CategoryContext.Provider value={value}>
       {children}
     </CategoryContext.Provider>
   )
