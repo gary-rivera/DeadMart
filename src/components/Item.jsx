@@ -16,7 +16,7 @@ function Item({ data }) {
         <div className={styles.bottomHalf}>
           <span className={styles.itemTitle}>{data.name}</span>
         </div>
-        {data.activation !== 'passive' && (
+        {data.active && (
           <div className={styles.activeItemBadge}>
             <span>ACTIVE</span>
           </div>

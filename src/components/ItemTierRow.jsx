@@ -6,7 +6,7 @@ function TierRow({ title, items, className }) {
   // tl;dr -- filter out activated items and append to end of list
   const activatedItems = []
   const sorted = items.filter((item) => {
-    if (item.activation !== 'passive') activatedItems.push(item)
+    if (item.active) activatedItems.push(item)
     else return item
   })
   sorted.push(...activatedItems)
