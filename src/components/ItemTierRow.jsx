@@ -1,6 +1,5 @@
-import { act } from 'react'
-import styles from '../styles/ItemContainer.module.css'
 import Item from './Item'
+import styles from '../styles/ItemShop.module.css'
 
 function TierRow({ title, items, className }) {
   // tl;dr -- filter out activated items and append to end of list

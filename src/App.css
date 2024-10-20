@@ -1,11 +1,11 @@
 #root {
   margin: 0;
   --black: #040404;
+  --light: #f0e1cb;
   --heading-text: #e4d4b6;
   --subhead-text: #a99c82;
   --action-text: #ffefd7;
   --spirit-blue: #98ffde;
-  --orange-light: #f0e1cb;
   --orange-active: #f0c685;
   --orange-passive: #d08d3e;
   --orange-highlight: #ec981a;
@@ -16,7 +16,6 @@
   --orange-bg-1: #523708;
   --orange-bg-2: #442d07;
   --orange-text: #2e2105;
-  --green-light: #f0e1cb;
   --green-active: #c7ee8e;
   --green-passive: #74b01c;
   --green-highlight: #7cbb1e;
@@ -26,7 +25,6 @@
   --green-bg-1: #314d08;
   --green-bg-2: #2a4306;
   --green-text: #1d3100;
-  --purple-light: #f0e1cb;
   --purple-active: #dabef0;
   --purple-passive: #c288f0;
   --purple-highlight: #ce91ff;
@@ -40,4 +38,5 @@
 
 .app {
   padding: 10px;
+  height: 100vw;
 }

@@ -11,9 +11,9 @@ import {
   itemSort,
 } from 'deadlock-content'
 
-import styles from '../styles/ItemContainer.module.css'
+import styles from '../styles/ItemShop.module.css'
 
-function ItemContainer() {
+function itemContainer() {
   const { currentCategory, setCurrentCategory } = useItemType()
 
   const items = {
@@ -40,34 +40,13 @@ function ItemContainer() {
           Spirit
         </div>
       </div>
-      <ItemTiersContainer
-        category={currentCategory}
-        items={items[currentCategory]}
-      />
-      {/* <div className={styles.itemsContainer}>
-        <ItemTierRow
-          title="$500"
-          items={tieredItems[1]}
-          className={styles.tierOne}
-        />
-        <ItemTierRow
-          title="$1250"
-          items={tieredItems[2]}
-          className={styles.tierTwo}
-        />
-        <ItemTierRow
-          title="$3000"
-          items={tieredItems[3]}
-          className={styles.tierThree}
-        />
-        <ItemTierRow
-          title="$6200"
-          items={tieredItems[4]}
-          className={styles.tierFour}
-        />
-      </div> */}
+      <div className={styles.itemShop}>
+        <ItemTiersContainer category={'weapon'} items={items.weapon} />
+        <ItemTiersContainer category={'vitality'} items={items.vitality} />
+        <ItemTiersContainer category={'spirit'} items={items.spirit} />
+      </div>
     </div>
   )
 }
 
-export default ItemContainer
+export default itemContainer

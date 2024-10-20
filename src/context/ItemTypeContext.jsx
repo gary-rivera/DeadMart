@@ -1,5 +1,6 @@
 import { createContext, useState, useContext } from 'react'
 import styles from '../styles/ItemContainer.module.css'
+import styles from '../styles/ItemShop.module.css'
 
 const ItemTypeContext = createContext()
 

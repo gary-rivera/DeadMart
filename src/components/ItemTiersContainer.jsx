@@ -1,5 +1,6 @@
 import ItemTierRow from './ItemTierRow'
 import styles from '../styles/ItemContainer.module.css'
+import styles from '../styles/ItemShop.module.css'
 import { useItemType } from '../context/ItemTypeContext'
 
 function ItemTiersContainer({ category, items }) {

@@ -1,4 +1,4 @@
-import ItemContainer from './components/ItemContainer'
+import ItemShop from './components/ItemShop'
 import { ItemTypeProvider } from './context/ItemTypeContext'
 import './App.css'
 
@@ -7,7 +7,7 @@ function App() {
     <ItemTypeProvider>
       <div className="app">
         <h1>Ded</h1>
-        <ItemContainer />
+        <ItemShop />
       </div>
     </ItemTypeProvider>
   )
