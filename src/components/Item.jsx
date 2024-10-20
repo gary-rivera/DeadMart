@@ -3,8 +3,9 @@ import { useItemType } from '../context/ItemTypeContext'
 import styles from '../styles/Item.module.css'
 
 function Item({ data }) {
-  const { currentCategory, categoryClassMap } = useItemType()
-
+  const { currentCategory, themeClassMap } = useItemType()
+  const theme = `theme${currentCategory.charAt(0).toUpperCase() + currentCategory.slice(1)}`
+  // debugger
   return (
     <Tippy
       content={<pre>{JSON.stringify(data, null, 4)}</pre>}
@@ -15,19 +16,13 @@ function Item({ data }) {
       <div
         id={data.id}
         key={data.id}
-        className={`${styles.itemCard} ${categoryClassMap[currentCategory]}`}
+        className={`${styles.itemCard} ${styles[themeClassMap[currentCategory]]}`}
       >
-        <div
-          className={`${styles.topHalf} ${categoryClassMap[currentCategory]}`}
-        >
+        <div className={`${styles.topHalf} ${styles[theme]}`}>
           {/* <img src={data.image} className={styles.itemImage} /> */}
         </div>
-        <div
-          className={`${styles.bottomHalf} ${categoryClassMap[currentCategory]}`}
-        >
-          <span
-            className={`${styles.itemTitle} ${categoryClassMap[currentCategory]}`}
-          >
+        <div className={`${styles.bottomHalf} ${styles[theme]}`}>
+          <span className={`${styles.itemTitle} ${styles[theme]}`}>
             {data.name}
           </span>
         </div>

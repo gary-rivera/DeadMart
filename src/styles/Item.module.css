@@ -14,15 +14,14 @@
 
 .itemCard.themeWeapon {
   color: var(--orange-text);
-  background-color: yellow;
-  border: 1px red solid;
 }
+
 .itemCard.themeVitality {
   color: var(--green-text);
 }
+
 .itemCard.themeSpirit {
-  /* color: var(--purple-text); */
-  color: yellow;
+  color: var(--purple-text);
 }
 
 .topHalf,
@@ -38,8 +37,19 @@
   background-color: black;
 }
 
+.topHalf.themeWeapon {
+  background-color: var(--orange-passive);
+}
+.topHalf.themeVitality {
+  background-color: var(--green-passive);
+}
+.topHalf.themeSpirit {
+  background-color: var(--purple-passive);
+}
+
 .bottomHalf {
-  background-color: lightslategray;
+  background-color: blue;
+  background-color: var(--light);
 }
 
 .itemTitle {
