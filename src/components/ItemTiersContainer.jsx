@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import ItemTierRow from './ItemTierRow'
 import styles from '../styles/ItemShop.module.css'
-import { useItemType } from '../context/ItemTypeContext'
+import { useCategoryContext } from '../context/CategoryContext'
 
 function ItemTiersContainer({ category, items, active }) {
-  const { currentCategory, themeClassMap } = useItemType()
+  const { currentCategory, themeClassMap } = useCategoryContext()
   const [isActive, setIsActive] = useState(false)
 
   useEffect(() => {

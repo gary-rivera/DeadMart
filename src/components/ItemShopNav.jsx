@@ -1,8 +1,8 @@
-import { useItemType } from '../context/ItemTypeContext'
+import { useCategoryContext } from '../context/CategoryContext'
 import styles from '../styles/ItemShop.module.css'
 
 function ItemShopNav({ handleCategoryChange }) {
-  const { currentCategory, themeClassMap } = useItemType()
+  const { currentCategory, themeClassMap } = useCategoryContext()
 
   return (
     <div className={styles.itemContainerSlotNav}>

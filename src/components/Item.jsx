@@ -1,9 +1,9 @@
 import Tippy, { tippy } from '@tippyjs/react'
-import { useItemType } from '../context/ItemTypeContext'
+import { useCategoryContext } from '../context/CategoryContext'
 import styles from '../styles/Item.module.css'
 
 function Item({ data }) {
-  const { currentCategory, themeClassMap } = useItemType()
+  const { currentCategory, themeClassMap } = useCategoryContext()
   const theme = `theme${currentCategory.charAt(0).toUpperCase() + currentCategory.slice(1)}`
   // debugger
   return (

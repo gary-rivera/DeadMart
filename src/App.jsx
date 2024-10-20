@@ -1,15 +1,15 @@
 import ItemShop from './components/ItemShop'
-import { ItemTypeProvider } from './context/ItemTypeContext'
+import { CategoryProvider } from './context/CategoryContext'
 import './App.css'
 
 function App() {
   return (
-    <ItemTypeProvider>
+    <CategoryProvider>
       <div className="app">
         <h1>Ded the Builder</h1>
         <ItemShop />
       </div>
-    </ItemTypeProvider>
+    </CategoryProvider>
   )
 }
 

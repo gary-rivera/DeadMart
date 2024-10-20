@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useItemType } from '../context/ItemTypeContext'
+import { useCategoryContext } from '../context/CategoryContext'
 
 import ItemShopNav from './ItemShopNav'
 import ItemTiersContainer from './ItemTiersContainer'
@@ -14,7 +14,7 @@ import {
 import styles from '../styles/ItemShop.module.css'
 
 function itemContainer() {
-  const { currentCategory, setCurrentCategory } = useItemType()
+  const { currentCategory, setCurrentCategory } = useCategoryContext()
 
   // TODO: move to context to avoid prop drilling as much?
   const items = {
