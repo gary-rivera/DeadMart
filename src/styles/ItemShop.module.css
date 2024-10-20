@@ -1,0 +1,122 @@
+.itemShop {
+  position: relative;
+  width: 1050px;
+}
+
+.itemsContainer {
+  border-top: 6px black solid;
+  margin: 0;
+  position: absolute;
+}
+
+.itemsContainer.active {
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.itemsContainer.inactive {
+  z-index: 1;
+  pointer-events: none;
+}
+
+.itemsContainer.themeWeapon {
+  border-top: 6px var(--orange-highlight) solid;
+}
+
+.itemsContainer.themeVitality {
+  border-top: 6px var(--green-highlight) solid;
+}
+
+.itemsContainer.themeSpirit {
+  border-top: 6px var(--purple-highlight) solid;
+}
+
+.tierRow {
+  width: 100%;
+  display: flex;
+}
+
+.tierVariant1.themeWeapon {
+  background-color: var(--orange-bg-1);
+}
+
+.tierVariant1.themeVitality {
+  background-color: var(--green-bg-1);
+}
+
+.tierVariant1.themeSpirit {
+  background-color: var(--purple-bg-1);
+}
+
+.tierVariant2.themeWeapon {
+  background-color: var(--orange-bg-2);
+}
+
+.tierVariant2.themeVitality {
+  background-color: var(--green-bg-2);
+}
+
+.tierVariant2.themeSpirit {
+  background-color: var(--purple-bg-2);
+}
+
+.sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+}
+
+.sidebar span {
+  transform: rotate(-90deg);
+}
+
+.itemsListContainer {
+  display: flex;
+
+  gap: 8px;
+  flex-wrap: wrap;
+  width: -webkit-fill-available;
+  min-height: auto;
+  padding: 1rem 0;
+}
+
+.itemContainerSlotNav {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.navTab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 125px;
+  height: 3rem;
+  border-top: 8px var(--black) solid;
+  background-color: var(--heading-text);
+  border-bottom: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: var(--black);
+  font-weight: 800;
+}
+
+.navTab.themeWeapon {
+  border-color: var(--orange-highlight);
+}
+.navTab.themeVitality {
+  border-color: var(--green-highlight);
+}
+.navTab.themeSpirit {
+  border-color: var(--purple-highlight);
+}
+
+.navTab.themeWeapon.active {
+  background-color: var(--orange-highlight);
+}
+.navTab.themeVitality.active {
+  background-color: var(--green-highlight);
+}
+.navTab.themeSpirit.active {
+  background-color: var(--purple-highlight);
+}

@@ -1,7 +1,11 @@
-import styles from '../styles/Item.module.css'
 import Tippy, { tippy } from '@tippyjs/react'
+import { useItemType } from '../context/ItemTypeContext'
+import styles from '../styles/Item.module.css'
 
 function Item({ data }) {
+  const { currentCategory, themeClassMap } = useItemType()
+  const theme = `theme${currentCategory.charAt(0).toUpperCase() + currentCategory.slice(1)}`
+  // debugger
   return (
     <Tippy
       content={<pre>{JSON.stringify(data, null, 4)}</pre>}
@@ -9,12 +13,18 @@ function Item({ data }) {
       interactive={true} // Allows interaction inside the tooltip
       hideOnClick={false} // Prevents tooltip from hiding on click
     >
-      <div id={data.id} key={data.id} className={styles.itemCard}>
-        <div className={styles.topHalf}>
+      <div
+        id={data.id}
+        key={data.id}
+        className={`${styles.itemCard} ${styles[themeClassMap[currentCategory]]}`}
+      >
+        <div className={`${styles.topHalf} ${styles[theme]}`}>
           {/* <img src={data.image} className={styles.itemImage} /> */}
         </div>
-        <div className={styles.bottomHalf}>
-          <span className={styles.itemTitle}>{data.name}</span>
+        <div className={`${styles.bottomHalf} ${styles[theme]}`}>
+          <span className={`${styles.itemTitle} ${styles[theme]}`}>
+            {data.name}
+          </span>
         </div>
         {data.active && (
           <div className={styles.activeItemBadge}>

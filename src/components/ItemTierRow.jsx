@@ -1,8 +1,9 @@
-import { act } from 'react'
-import styles from '../styles/ItemContainer.module.css'
 import Item from './Item'
+import styles from '../styles/ItemShop.module.css'
+import { useItemType } from '../context/ItemTypeContext'
 
 function TierRow({ title, items, className }) {
+  const { currentCategory } = useItemType()
   // tl;dr -- filter out activated items and append to end of list
   const activatedItems = []
   const sorted = items.filter((item) => {
@@ -18,7 +19,9 @@ function TierRow({ title, items, className }) {
       </div>
       <div className={styles.itemsListContainer}>
         {sorted.length ? (
-          sorted.map((item) => <Item key={item.id} data={item} />)
+          sorted.map((item) => (
+            <Item key={item.id} data={item} className={className} />
+          ))
         ) : (
           <div>No items available</div>
         )}
