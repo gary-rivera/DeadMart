@@ -1,6 +1,6 @@
 .itemCard {
-  width: 6rem;
-  height: 6.5rem;
+  width: 100px;
+  height: 110px;
   border-radius: 5px;
   /* background-color: lightgray; */
   color: black;
@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .topHalf,
@@ -62,7 +63,7 @@
   font-size: x-small;
   font-weight: 800;
   color: black;
-  top: 45%;
+  top: 42%;
   width: 3rem;
   height: 1rem;
   border-radius: 5px;

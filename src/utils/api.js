@@ -6,6 +6,7 @@ const DEADLOCK_ASSETS_API = 'https://assets.deadlock-api.com'
 export const fetcher = async (url) => {
   try {
     const response = await axios.get(url)
+
     return response.data
   } catch (error) {
     if (error.response) {
@@ -26,13 +27,19 @@ export const fetcher = async (url) => {
   }
 }
 
-export const fetchItemsBySlotType = (slotType) => {
+export const getItemsBySlotType = async (slotType) => {
+  return await fetcher(
+    `${DEADLOCK_ASSETS_API}/v2/items/by-slot-type/${slotType}`
+  )
+}
+
+export const useItemsBySlotType = (slotType) => {
   return useSWR(
     `${DEADLOCK_ASSETS_API}/v2/items/by-slot-type/${slotType}`,
     fetcher,
     {
       revalidateOnFocus: false,
-      shouldRetryOnError: false,
+      shouldRetryOnError: true,
     }
   )
 }
