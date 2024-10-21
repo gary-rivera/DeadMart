@@ -9,7 +9,7 @@ function App() {
     <ItemsProvider>
       <CategoryProvider>
         <div className="app">
-          <h1>Ded the Builder</h1>
+          <h1>DingleLock</h1>
           <ItemShop />
         </div>
       </CategoryProvider>
