@@ -2,27 +2,69 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ded Build</title>
-    <link
-      rel="preload"
-      href="/path-to-your-styles.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript
-      ><link rel="stylesheet" href="/path-to-your-styles.css"
-    /></noscript>
+    <link rel="icon" id="tab-icon" type="image/png" href="default-icon.png" />
+    <script>
+      // Prefetch API data before the app initializes
+      const API_URL = 'https://assets.deadlock-api.com/v1/icons'
+
+      async function fetchAndStoreIcons() {
+        try {
+          localStorage.clear()
+          const response = await fetch(API_URL)
+          const icons = await response.json()
+
+          const filteredIcons = {
+            vitality: icons.icon_fortitude,
+            weapon: icons.icon_courage,
+            spirit: icons.icon_spirit,
+            rejuvenator: icons.rejuvenator,
+          }
+
+          // Store in localStorage for access in the app
+          localStorage.setItem('icons', JSON.stringify(filteredIcons))
+
+          /* const tabIconUrl = filteredIcons.rejuvenator
+          if (tabIconUrl) {
+            console.log('tabIconUrl', tabIconUrl)
+            document.getElementById('tab-icon').href = tabIconUrl
+          }*/
+        } catch (error) {
+          console.error('Error fetching icons:', error)
+        }
+      }
+
+      /*async function injectWindowTab(url) {
+        fetch(url)
+          .then((response) => response.text()) // Get the SVG text content
+          .then((svgContent) => {
+            const parser = new DOMParser()
+            const svgDoc = parser.parseFromString(svgContent, 'image/svg+xml')
+            const svgElement = svgDoc.querySelector('svg')
+
+            if (svgElement) {
+              svgElement.style.fill = 'yellow'
+
+              const targetElement = document.getElementById(targetElementId)
+              if (targetElement) {
+                targetElement.appendChild(svgElement)
+              }
+            }
+          })
+          .catch((error) => console.error('Error loading SVG:', error))
+      }*/
+
+      // Call the fetch function before the app loads
+      fetchAndStoreIcons()
+      // injectWindowTab(localStorage.getItem('rejuvenator'))
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-
-    <!-- JavaScript from CDN -->
     <script src="https://unpkg.com/page/page.js"></script>
     <script>
-      // Initialize Page.js or other JavaScript
       page('/', function () {
         console.log('Home page loaded')
       })

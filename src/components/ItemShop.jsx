@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import { useItemType } from '../context/ItemTypeContext'
+import { useCategoryContext } from '../context/CategoryContext'
+import { useItemsContext } from '../context/ItemsContext'
 
 import ItemShopNav from './ItemShopNav'
 import ItemTiersContainer from './ItemTiersContainer'
-import { useItemsBySlotType } from '../utils/api'
 import {
   ALL_WEAPON_ITEMS,
   ALL_VITALITY_ITEMS,
@@ -14,14 +14,8 @@ import {
 import styles from '../styles/ItemShop.module.css'
 
 function itemContainer() {
-  const { currentCategory, setCurrentCategory } = useItemType()
-
-  // TODO: move to context to avoid prop drilling as much?
-  const items = {
-    weapon: ALL_WEAPON_ITEMS,
-    vitality: ALL_VITALITY_ITEMS,
-    spirit: ALL_SPIRIT_ITEMS,
-  }
+  const { currentCategory, setCurrentCategory } = useCategoryContext()
+  const { weaponItems, spiritItems, vitalityItems } = useItemsContext()
 
   function handleCategoryChange(evt) {
     const category = evt.target.innerText.toLowerCase()
@@ -32,9 +26,9 @@ function itemContainer() {
     <div>
       <ItemShopNav handleCategoryChange={handleCategoryChange} />
       <div className={styles.itemShop}>
-        <ItemTiersContainer category={'weapon'} items={items.weapon} />
-        <ItemTiersContainer category={'vitality'} items={items.vitality} />
-        <ItemTiersContainer category={'spirit'} items={items.spirit} />
+        <ItemTiersContainer category={'weapon'} items={weaponItems} />
+        <ItemTiersContainer category={'vitality'} items={vitalityItems} />
+        <ItemTiersContainer category={'spirit'} items={spiritItems} />
       </div>
     </div>
   )

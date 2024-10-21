@@ -1,9 +1,9 @@
 import Item from './Item'
 import styles from '../styles/ItemShop.module.css'
-import { useItemType } from '../context/ItemTypeContext'
+import { useCategoryContext } from '../context/CategoryContext'
 
 function TierRow({ title, items, className }) {
-  const { currentCategory } = useItemType()
+  const { currentCategory } = useCategoryContext()
   // tl;dr -- filter out activated items and append to end of list
   const activatedItems = []
   const sorted = items.filter((item) => {

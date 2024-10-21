@@ -1,15 +1,19 @@
+import { useState, useEffect } from 'react'
 import ItemShop from './components/ItemShop'
-import { ItemTypeProvider } from './context/ItemTypeContext'
+import { CategoryProvider } from './context/CategoryContext'
+import { ItemsProvider } from './context/ItemsContext'
 import './App.css'
 
 function App() {
   return (
-    <ItemTypeProvider>
-      <div className="app">
-        <h1>Ded the Builder</h1>
-        <ItemShop />
-      </div>
-    </ItemTypeProvider>
+    <ItemsProvider>
+      <CategoryProvider>
+        <div className="app">
+          <h1>Ded the Builder</h1>
+          <ItemShop />
+        </div>
+      </CategoryProvider>
+    </ItemsProvider>
   )
 }
 
