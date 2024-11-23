@@ -1,19 +1,22 @@
-import { useState, useEffect } from 'react'
 import ItemShop from './components/ItemShop'
 import { CategoryProvider } from './context/CategoryContext'
 import { ItemsProvider } from './context/ItemsContext'
+import logo from './assets/DeadMart-original.png'
 import './App.css'
 
 function App() {
   return (
-    <ItemsProvider>
-      <CategoryProvider>
-        <div className="app">
-          <h1>Ded the Builder</h1>
+    <div className="app">
+      <ItemsProvider>
+        <CategoryProvider>
+          <div className="header">
+            <img className="logo" src={logo} />
+            <h1>DeadMart</h1>
+          </div>
           <ItemShop />
-        </div>
-      </CategoryProvider>
-    </ItemsProvider>
+        </CategoryProvider>
+      </ItemsProvider>
+    </div>
   )
 }
 

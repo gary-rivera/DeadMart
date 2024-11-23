@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ded Build</title>
-    <link rel="icon" id="tab-icon" type="image/png" href="default-icon.png" />
+    <title>DeadMart</title>
+    <link rel="icon" id="tab-icon" type="image/png" href="DeadMart-small.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Six+Caps&display=swap"
+      rel="stylesheet"
+    />
     <script>
       // Prefetch API data before the app initializes
       const API_URL = 'https://assets.deadlock-api.com/v1/icons'
@@ -24,40 +30,13 @@
 
           // Store in localStorage for access in the app
           localStorage.setItem('icons', JSON.stringify(filteredIcons))
-
-          /* const tabIconUrl = filteredIcons.rejuvenator
-          if (tabIconUrl) {
-            console.log('tabIconUrl', tabIconUrl)
-            document.getElementById('tab-icon').href = tabIconUrl
-          }*/
         } catch (error) {
           console.error('Error fetching icons:', error)
         }
       }
 
-      /*async function injectWindowTab(url) {
-        fetch(url)
-          .then((response) => response.text()) // Get the SVG text content
-          .then((svgContent) => {
-            const parser = new DOMParser()
-            const svgDoc = parser.parseFromString(svgContent, 'image/svg+xml')
-            const svgElement = svgDoc.querySelector('svg')
-
-            if (svgElement) {
-              svgElement.style.fill = 'yellow'
-
-              const targetElement = document.getElementById(targetElementId)
-              if (targetElement) {
-                targetElement.appendChild(svgElement)
-              }
-            }
-          })
-          .catch((error) => console.error('Error loading SVG:', error))
-      }*/
-
       // Call the fetch function before the app loads
       fetchAndStoreIcons()
-      // injectWindowTab(localStorage.getItem('rejuvenator'))
     </script>
   </head>
   <body>
