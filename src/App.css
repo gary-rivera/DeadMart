@@ -1,39 +1,18 @@
 #root {
   margin: 0;
-  --black: #040404;
-  --light: #f0e1cb;
-  --heading-text: #e4d4b6;
-  --subhead-text: #a99c82;
-  --action-text: #ffefd7;
-  --spirit-blue: #98ffde;
-  --orange-active: #f0c685;
-  --orange-passive: #d08d3e;
-  --orange-highlight: #ec981a;
-  --orange-card: #c97a03;
-  --orange-component: #c97a03;
-  --orange-shadow: #80550f;
-  --orange-shadow-2: #704a0c;
-  --orange-bg-1: #523708;
-  --orange-bg-2: #442d07;
-  --orange-text: #2e2105;
-  --green-active: #c7ee8e;
-  --green-passive: #74b01c;
-  --green-highlight: #7cbb1e;
-  --green-card: #659818;
-  --green-shadow: #4d7214;
-  --green-shadow-2: #436310;
-  --green-bg-1: #314d08;
-  --green-bg-2: #2a4306;
-  --green-text: #1d3100;
-  --purple-active: #dabef0;
-  --purple-passive: #c288f0;
-  --purple-highlight: #ce91ff;
-  --purple-card: #8b56b4;
-  --purple-shadow: #623585;
-  --purple-shadow-2: #552d74;
-  --purple-bg-1: #3e2751;
-  --purple-bg-2: #342044;
-  --purple-text: #331f43;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  height: 100%;
 }
 
 .app {
