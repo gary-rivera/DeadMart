@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "vite-plugin-gh-pages"
   },
   "dependencies": {
     "@tippyjs/react": "^4.2.6",
@@ -31,6 +32,7 @@
     "globals": "^15.11.0",
     "prettier": "^3.3.3",
     "ruio": "^0.9.0",
-    "vite": "^5.4.8"
+    "vite": "^5.4.8",
+    "vite-plugin-gh-pages": "^1.0.0"
   }
 }
