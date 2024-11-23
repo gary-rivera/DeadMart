@@ -1,8 +1,13 @@
-# React + Vite
+# Deadmart
+DeadMart is an open-source template inspired by the in-game shop interface of Deadlock. This project aims to provide a starting point for developers looking to recreate or customize similar UI elements.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Big thanks to [@lukeschaefer](https://github.com/lukeschaefer) and [@Hexe](https://www.patreon.com/user?u=68961896) for their incredible resources. Without their online contributions, this project would have taken much longer to complete.
 
-Currently, two official plugins are available:
+Feel free to use or adapt this project as needed. However, please note that this work is not my intellectual property—it belongs to Valve.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## External resources
+- [deadlock-content](https://github.com/lukeschaefer/Deadlock-Content) - specifically for items and their metadata + help rendering spacing while requests pend
+- [deadlock-api](https://deadlock-api.com/) - assets and any missing details that weren't found in deadlock-content package
+
+### Disclaimer
+DeadMart is not endorsed by Valve and does not reflect the views or opinions of Valve or anyone officially involved in producing or managing Valve properties.
