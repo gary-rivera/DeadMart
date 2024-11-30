@@ -13,7 +13,13 @@ export function ItemsProvider({ children }) {
   const [vitalityItems, setVitalityItems] = useState(ALL_VITALITY_ITEMS)
   const [spiritItems, setSpiritItems] = useState(ALL_SPIRIT_ITEMS)
   const [isLoading, setIsLoading] = useState(false) // Not used as of now..
-  const [icons, setIcons] = useState({})
+  const [icons, setIcons] = useState({
+    // placeholder icons while index.html prefetches the real ones
+    rejuvenator: 'https://assets.deadlock-api.com/icons/rejuvenator.svg',
+    spirit: 'https://assets.deadlock-api.com/icons/icon_spirit.svg',
+    vitality: 'https://assets.deadlock-api.com/icons/icon_fortitude.svg',
+    weapon: 'https://assets.deadlock-api.com/icons/icon_courage.svg',
+  })
 
   useEffect(() => {
     const storedIcons = localStorage.getItem('icons')
